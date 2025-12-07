@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 
+
 sealed interface ComposeNavigator {
 
     val navActions: SharedFlow<NavAction?>

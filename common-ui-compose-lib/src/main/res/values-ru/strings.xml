@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="retry">Повторить</string>
+    <string name="logout">Выйти</string>
+    <string name="ok">ОК</string>
+    <string name="cancel">Отмена</string>
+</resources>

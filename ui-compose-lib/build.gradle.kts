@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.horizonguard.common_ui_compose_lib"
+    namespace = "ru.sharaev.ui_compose_lib"
 
     compileSdk = 36
 

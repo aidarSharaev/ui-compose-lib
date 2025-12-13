@@ -1,4 +1,4 @@
-package com.horizonguard.common_ui_compose_lib.designsystem
+package ru.sharaev.ui_compose_lib.designsystem
 
 
 import androidx.annotation.DrawableRes
@@ -15,7 +15,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
-import com.horizonguard.common_ui_compose_lib.R
+import ru.sharaev.ui_compose_lib.R
 
 @Composable
 fun Button(

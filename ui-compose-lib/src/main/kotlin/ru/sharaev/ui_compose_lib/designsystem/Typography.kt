@@ -1,4 +1,4 @@
-package com.horizonguard.common_ui_compose_lib.designsystem
+package ru.sharaev.ui_compose_lib.designsystem
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.horizonguard.common_ui_compose_lib.R
+import ru.sharaev.ui_compose_lib.R
 
 val manropeFamily = FontFamily(
     Font(R.font.manrope_extra_light, FontWeight.ExtraLight),

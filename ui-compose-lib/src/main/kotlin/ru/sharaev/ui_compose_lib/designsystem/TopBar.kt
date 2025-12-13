@@ -1,4 +1,4 @@
-package com.horizonguard.common_ui_compose_lib.designsystem
+package ru.sharaev.ui_compose_lib.designsystem
 
 import androidx.annotation.DrawableRes
 import androidx.compose.material.icons.Icons

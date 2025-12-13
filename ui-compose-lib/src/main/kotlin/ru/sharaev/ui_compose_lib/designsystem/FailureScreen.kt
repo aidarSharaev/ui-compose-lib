@@ -1,4 +1,4 @@
-package com.horizonguard.common_ui_compose_lib.designsystem
+package ru.sharaev.ui_compose_lib.designsystem
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import com.horizonguard.common_ui_compose_lib.R
+import ru.sharaev.ui_compose_lib.R
 
 @Composable
 fun FailureScreen(

@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "common-ui-compose-lib"
-include(":common-ui-compose-lib")
+rootProject.name = "ui-compose-lib"
+include(":ui-compose-lib")

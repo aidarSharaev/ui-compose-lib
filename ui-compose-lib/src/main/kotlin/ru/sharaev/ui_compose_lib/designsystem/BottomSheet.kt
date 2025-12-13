@@ -1,4 +1,4 @@
-package com.horizonguard.common_ui_compose_lib.designsystem
+package ru.sharaev.ui_compose_lib.designsystem
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -11,7 +11,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
-import com.horizonguard.common_ui_compose_lib.R
+import ru.sharaev.ui_compose_lib.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

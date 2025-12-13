@@ -1,4 +1,4 @@
-package com.horizonguard.common_ui_compose_lib.designsystem
+package ru.sharaev.ui_compose_lib.designsystem
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text

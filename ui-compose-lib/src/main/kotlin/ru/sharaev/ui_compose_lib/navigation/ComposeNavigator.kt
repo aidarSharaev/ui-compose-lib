@@ -1,4 +1,4 @@
-package com.horizonguard.common_ui_compose_lib.navigation
+package ru.sharaev.ui_compose_lib.navigation
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope

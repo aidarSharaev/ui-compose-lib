@@ -1,4 +1,4 @@
-package com.horizonguard.common_ui_compose_lib.navigation
+package ru.sharaev.ui_compose_lib.navigation
 
 import android.content.Context
 import android.content.Intent

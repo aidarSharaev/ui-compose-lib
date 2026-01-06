@@ -1,6 +1,8 @@
 package ru.sharaev.ui_compose_lib.designsystem
 
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.Typography
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -8,7 +10,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import ru.sharaev.ui_compose_lib.R
 
-val manropeFamily = FontFamily(
+private val DSFontFamily = FontFamily(
     Font(R.font.manrope_extra_light, FontWeight.ExtraLight),
     Font(R.font.manrope_light, FontWeight.Light),
     Font(R.font.manrope_regular, FontWeight.Normal),
@@ -18,43 +20,49 @@ val manropeFamily = FontFamily(
     Font(R.font.manrope_extra_bold, FontWeight.ExtraBold),
 )
 
-// Set of Material typography styles to start with
-val DesignSystemTypography = Typography(
+@Composable
+fun DSTypography(colorScheme: ColorScheme) = Typography(
     titleLarge = TextStyle(
-        fontFamily = manropeFamily,
+        fontFamily = DSFontFamily,
         fontWeight = FontWeight.SemiBold,
-        fontSize = 20.sp,
-        lineHeight = 26.sp,
+        fontSize = 22.sp,
+        lineHeight = 28.sp,
+        color = colorScheme.onSurface,
     ),
     titleMedium = TextStyle(
-        fontFamily = manropeFamily,
+        fontFamily = DSFontFamily,
         fontWeight = FontWeight.Medium,
         fontSize = 16.sp,
         lineHeight = 24.sp,
+        color = colorScheme.onSurface,
     ),
     titleSmall = TextStyle(
-        fontFamily = manropeFamily,
+        fontFamily = DSFontFamily,
         fontWeight = FontWeight.Medium,
         fontSize = 14.sp,
         lineHeight = 21.sp,
+        color = colorScheme.onSurface,
     ),
-    headlineLarge = TextStyle(
-        fontFamily = manropeFamily,
-        fontWeight = FontWeight.SemiBold,
-        fontSize = 32.sp,
-        lineHeight = 40.sp,
+    headlineMedium = TextStyle(
+        fontFamily = DSFontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 28.sp,
+        lineHeight = 36.sp,
+        color = colorScheme.onSurface,
     ),
     bodyLarge = TextStyle(
-        fontFamily = manropeFamily,
+        fontFamily = DSFontFamily,
         fontWeight = FontWeight.SemiBold,
         fontSize = 18.sp,
         lineHeight = 24.sp,
+        color = colorScheme.onSurface,
     ),
     bodySmall = TextStyle(
-        fontFamily = manropeFamily,
+        fontFamily = DSFontFamily,
         fontWeight = FontWeight.W400,
         fontSize = 12.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.4.sp,
+        color = colorScheme.onSurface,
     ),
 )

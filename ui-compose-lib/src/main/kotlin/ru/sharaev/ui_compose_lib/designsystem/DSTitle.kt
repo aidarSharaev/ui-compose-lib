@@ -10,17 +10,33 @@ import androidx.compose.ui.text.style.TextAlign
 import ru.sharaev.ui_compose_lib.R
 
 @Composable
-fun Title(
+fun DSTitle(
     value: String,
     modifier: Modifier = Modifier,
     titleAlign: TextAlign = TextAlign.Start,
 ) {
-    Text(
+    DSText(
         text = value,
         modifier = modifier
             .fillMaxWidth()
             .padding(bottom = dimensionResource(R.dimen.padding_6)),
         style = MaterialTheme.typography.titleLarge,
+        textAlign = titleAlign,
+    )
+}
+
+@Composable
+fun DSHeadlineLabel(
+    value: String,
+    modifier: Modifier = Modifier,
+    titleAlign: TextAlign = TextAlign.Start,
+) {
+    DSText(
+        text = value,
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(bottom = dimensionResource(R.dimen.padding_6)),
+        style = MaterialTheme.typography.headlineMedium,
         textAlign = titleAlign,
     )
 }

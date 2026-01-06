@@ -1,5 +1,6 @@
 package ru.sharaev.ui_compose_lib.navigation
 
+import android.content.Intent
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
@@ -21,6 +22,8 @@ sealed interface ComposeNavigator {
 
     fun replaceAll(destination: Destination)
 
+    fun openBrowser(intent: Intent, onError: (Exception) -> Unit)
+
     class Impl(
         mainDispatcher: CoroutineDispatcher,
     ) : ComposeNavigator {
@@ -40,6 +43,10 @@ sealed interface ComposeNavigator {
 
         override fun replaceAll(destination: Destination) = emit(
             NavAction.ReplaceAll(destination = destination)
+        )
+
+        override fun openBrowser(intent: Intent, onError: (Exception) -> Unit) = emit(
+            NavAction.OpenBrowser(intent = intent, onError = onError)
         )
 
         private fun emit(action: NavAction) {

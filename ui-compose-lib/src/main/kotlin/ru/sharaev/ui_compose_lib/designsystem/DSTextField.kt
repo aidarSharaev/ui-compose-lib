@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -18,31 +19,44 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
+import androidx.compose.ui.unit.TextUnit
 import ru.sharaev.ui_compose_lib.R
 
 private const val SINGLE_LINE: Int = 1
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TextField(
+fun DSTextField(
     value: String,
     placeholder: String,
     modifier: Modifier = Modifier,
     isError: Boolean = false,
     keyboardOptions: KeyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
     keyboardActions: KeyboardActions = KeyboardActions.Default,
+    textStyle: TextStyle = MaterialTheme.typography.titleMedium,
+    letterSpacing: TextUnit = MaterialTheme.typography.titleMedium.letterSpacing,
+    label: String? = null,
     trailingIcon: (@Composable () -> Unit)? = null,
     onValueChange: (String) -> Unit = {},
 ) {
     val source = remember { MutableInteractionSource() }
 
+    if (label != null) {
+        DSText(
+            text = label,
+            modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_6))
+        )
+    }
+
     BasicTextField(
         value = value,
         onValueChange = onValueChange,
-        textStyle = MaterialTheme.typography.titleMedium.copy(
-            color = MaterialTheme.colorScheme.onSurfaceVariant
+        textStyle = textStyle.copy(
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            letterSpacing = letterSpacing
         ),
         modifier = modifier
             .heightIn(min = dimensionResource(R.dimen.padding_45))
@@ -69,10 +83,12 @@ fun TextField(
             ),
             trailingIcon = trailingIcon,
             placeholder = {
-                Text(
+                DSText(
                     text = placeholder,
-                    style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.tertiary,
+                    style = textStyle.copy(
+                        color = MaterialTheme.colorScheme.tertiary,
+                        letterSpacing = letterSpacing
+                    ),
                 )
             },
             interactionSource = source,

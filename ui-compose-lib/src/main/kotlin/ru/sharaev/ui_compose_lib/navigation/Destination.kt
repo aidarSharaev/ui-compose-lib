@@ -1,5 +1,6 @@
 package ru.sharaev.ui_compose_lib.navigation
 
+import android.content.Intent
 import android.os.Bundle
 
 data class Destination(
@@ -16,4 +17,6 @@ sealed interface NavAction {
     data class Navigate(val destination: Destination) : NavAction
 
     data class ReplaceAll(val destination: Destination) : NavAction
+
+    data class OpenBrowser(val intent: Intent, val onError: (Exception) -> Unit) : NavAction
 }

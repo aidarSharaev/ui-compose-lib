@@ -6,7 +6,7 @@ import androidx.compose.material3.SwitchDefaults
 import androidx.compose.runtime.Composable
 
 @Composable
-fun Switch(
+fun DSSwitch(
     checked: Boolean,
     onSwitch: (Boolean) -> Unit,
 ) {

@@ -15,7 +15,7 @@ import ru.sharaev.ui_compose_lib.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun BottomSheet(
+fun DSBottomSheet(
     title: String,
     onDismiss: () -> Unit,
     content: @Composable ColumnScope.() -> Unit,
@@ -31,7 +31,7 @@ fun BottomSheet(
                 .padding(horizontal = dimensionResource(R.dimen.padding_24))
                 .padding(bottom = dimensionResource(R.dimen.padding_16))
         ) {
-            Title(value = title)
+            DSTitle(value = title)
 
             content()
         }

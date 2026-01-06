@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Fail -->
     <string name="retry">Retry</string>
+    <string name="description_undefined_error">An error occurred. Please try again later</string>
+    <string name="description_check_connection_error">Please check your connection and try again</string>
+    <string name="description_server_error">Internal server error. Please try again later</string>
+    <string name="toast_undefined_error">An error occurred</string>
+    <string name="toast_wrong_email">Invalid email format</string>
+
+    <!-- Account -->
     <string name="logout">Logout</string>
+    <string name="logout_description">Are you sure you want to logout from your account?</string>
+    <string name="login">Login</string>
+
+    <!-- Common words -->
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="c_continue">Continue</string>
+    <string name="support">Support</string>
+    <string name="send">Send</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="pay">Pay</string>
+
+    <!-- Theme -->
+    <string name="theme_pick">Theme</string>
+    <string name="system_theme">System</string>
+    <string name="light_theme">Light</string>
+    <string name="dark_theme">Dark</string>
+
+    <!-- Permission -->
+    <string name="grant_permission">Grant permission</string>
+
 </resources>

@@ -1,19 +1,96 @@
 [versions]
 agp = "8.6.0"
+firebaseAuth = "24.0.1"
+firebaseUiAuth = "9.1.1"
+firebaseFirestore = "26.0.2"
+googleid = "1.1.1"
 kotlin = "2.0.21"
+kotlinxSerializationJson = "1.8.0"
+ksp = "2.0.21-1.0.27"
+coreKtx = "1.16.0"
+activityCompose = "1.10.1"
+coroutine = "1.8.1"
+google = "4.4.4"
 compose = "1.9.0"
 material3 = "1.3.2"
+lifecycle = "2.9.2"
 navigation = "2.9.3"
+credential = "1.5.0"
+coil = "2.3.0"
+
+# checker
+detekt = "1.23.6"
+
+# storage
+dataStore = "1.1.7"
+room = "2.6.1"
+
+# di
+hilt = "2.54"
+javaxInject = "1"
+koin = "3.5.0"
+
+# network
+retrofit = "2.9.0"
+loggingInterceptor = "4.9.0"
 
 [libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credential" }
+firebaseui-firebase-ui-auth = { group = "com.firebaseui", name = "firebase-ui-auth", version.ref = "firebaseUiAuth" }
+google-firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+google-firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+google-googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+
+# compose
+androidx-ui-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-ui-compose = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose" }
 androidx-ui-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+androidx-ui-coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+
+# lifecycle
+androidx-ui-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-ui-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+androidx-ui-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+
+# navigation
 androidx-ui-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
 
+# di
+di-javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInject" }
+di-koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+di-koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+di-koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+di-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+di-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 
+# coroutine
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutine" }
+
+# network
+network-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
+network-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+network-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
+
+# data
+save-datastore = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "dataStore" }
+save-room = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+save-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+save-room-ksp = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+
+# test
 [plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-ksp-dagger = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "google" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+checker-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 

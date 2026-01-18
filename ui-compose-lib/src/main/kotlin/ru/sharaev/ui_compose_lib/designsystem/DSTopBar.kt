@@ -74,7 +74,7 @@ fun DSTabRowTopBar(
     title: @Composable () -> Unit,
     actions: (@Composable () -> Unit)? = null,
 ) {
-    TopAppBar(
+     CenterAlignedTopAppBar(
         title = { title.invoke() },
         actions = { actions?.invoke() },
         colors = topAppBarColors,
